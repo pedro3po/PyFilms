@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+<div class="container-fluid">
+    <form method="POST">
+        {% csrf_token %}
+        <h1 class="text-dark">Confirmar exclusão do Filme: {{item.filme}}</h1>
+        <button type="button" class="btn btn-warning"><a style="color: white;" href="{% url 'listar_filmes' %}">Cancelar</a></button>
+        <button class="btn btn-success" type="submit">Confirmar</button>
+    </form>
+</div>
+{% endblock %}

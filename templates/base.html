@@ -1,0 +1,93 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="stylesheet" href="/static/css/login.css" type="text/css"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <title>PyFilms</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid d-flex flex-row">
+      <div class="d-flex flex-row">
+        <button type="button" class="btn btn-outline-light"><a href="{% url 'index' %}">Home</a></button>
+        <button type="button" class="btn btn-outline-light"><a href="{% url 'listar_filmes' %}">Meus Filmes</a></button>
+        <button type="button" class="btn btn-outline-light"><a href="{% url 'listar_filmes' %}">Meus Anime</a></button>
+        <button type="button" class="btn btn-outline-light"><a href="{% url 'listar_filmes' %}">Meus Livros</a></button>
+        <button type="button" class="btn btn-outline-light"><a href="{% url 'listar_filmes' %}">Meus Jogos</a></button>
+      </div>
+    </div>
+
+    <div class='' style="padding: 16px; border-radius:4px">
+      <button type="button" class="btn btn-outline-light"><a href="{% url 'logout' %}">Sair</a></button>
+    </div>
+  </nav>
+  <style>
+    a {
+      list-style: none;
+      text-decoration: none;
+      color: aliceblue;
+    }
+  </style>
+
+  <style>
+    .footer {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+    }
+  </style>
+
+  <div class="container">
+    {% block conteudo %}
+
+    {% endblock %}
+  </div>
+</body>
+
+<footer class="footer bg-dark text-center text-white border-bottom">
+
+  <!-- Grid container -->
+  <div class="container p-4">
+    <!-- Section: Social media -->
+    <section class="mb-4">
+      <!-- Facebook -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-facebook-f"></i></a>
+
+      <!-- Twitter -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-twitter"></i></a>
+
+      <!-- Google -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-google"></i></a>
+
+      <!-- Instagram -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-instagram"></i></a>
+
+      <!-- Linkedin -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-linkedin-in"></i></a>
+
+      <!-- Github -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-github"></i></a>
+    </section>
+    <!-- Section: Social media -->
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2022 Copyright:
+      <a class="text-white" href="https://mdbootstrap.com/">PyFilms</a>
+    </div>
+    <!-- Copyright -->
+</footer>
+<!-- Footer -->
+
+</html>

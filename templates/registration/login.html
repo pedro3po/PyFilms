@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+<div class="login">
+    <h1>Login</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <p>
+            <label for="id_username">Usuario:</label>
+            <input type="text" name="username" autofocus="" autocapitalize="none" autocomplete="username" maxlength="150" required="" id="id_username">
+        </p>
+        <p>
+            <label for="id_password">Senha:</label>
+            <input type="password" name="password" autocomplete="current-password" required="" id="id_password">
+        </p>
+        <button type="submit" class="btn btn-info" value="Login">Login</button>
+        <!--  type="submit" name="" value="Login"> -->
+    </form>
+    <hr>
+    <button type="button" class="btn btn-info"><a href="{% url 'signup' %}">Registrar</a></button>
+</div>
+{% endblock %}

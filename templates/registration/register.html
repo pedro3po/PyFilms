@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+<div class="container">
+    <h1 style="text-align: center;" class="text-dark">Registrar</h1>
+    <div class="table table-responsive">
+        <form class="mb-3" action="" method="POST">
+            {% csrf_token %}
+            {{ form.as_p }} 
+            <input type="submit" name="" value="Registrar">
+        </form>
+    </div>
+</div>
+{% endblock %}
