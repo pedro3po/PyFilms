@@ -10,12 +10,10 @@
             {% render_field filmes.filme class="form-control" placeholder="digite o nome do filme" %}
             <label class="text-dark">Finalizado</label>
             {% render_field filmes.finalizado class="form-control form-check-input" %}
-            <label class="text-dark">Resenha</label>
-            {% render_field filmes.resenha class="form-control pull-left" placeholder="Escreva o que achou do filme" %}
             <label class="text-dark">Nota</label>
             {% render_field filmes.nota class="form-control pull-left" placeholder="De uma nota ao filme" %}
-            
-
+            <label class="text-dark">Resenha</label>
+            {% render_field filmes.resenha class="form-control pull-left" placeholder="Escreva o que achou do filme" %}
         </div>
         <button style="margin-top: 10px;" class="btn btn-success" type="submit">Salvar</button>
     </form>
